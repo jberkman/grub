@@ -1881,8 +1881,8 @@ zio_read (blkptr_t *bp, grub_zfs_endian_t endian, void **buf,
 	        << SPA_MINBLOCKSHIFT));
       psize = get_psize (bp, endian);
     }
-  grub_dprintf("zfs", "zio_read: E %d: size %" PRIdGRUB_SSIZE "/%"
-	       PRIdGRUB_SSIZE "\n", (int)BP_IS_EMBEDDED(bp), lsize, psize);
+  grub_dprintf("zfs", "zio_read: E %d: size %" PRIuGRUB_SIZE "/%"
+	       PRIuGRUB_SIZE "\n", (int)BP_IS_EMBEDDED(bp), lsize, psize);
 
   if (size)
     *size = lsize;
